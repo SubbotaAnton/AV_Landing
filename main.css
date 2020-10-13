@@ -1,0 +1,143 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background: linear-gradient(180deg, #9DD157 0%, #80BB3D 100%);
+    position: relative;
+    font-family: Ubuntu, "Times New Roman", serif;
+    color: #ffffff;
+    min-height:100vh;
+    padding-bottom: 140px;
+}
+
+.logoLink {
+    display: block;
+    cursor: pointer;
+    text-underline: none;
+}
+
+.sravniLogo {
+    position: absolute;
+    left: 28px;
+    top: 23px;
+}
+
+.sravniIcon {
+    display: block;
+    width: 128px;
+    height: 24px;
+    background: url('./images/sravni_logo.png') no-repeat left top;
+}
+
+.azbukaLogo {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.azbukaIcon {
+    display: block;
+    width: 134px;
+    height: 40px;
+    background: url('./images/azbuka_logo.png') no-repeat left top;
+}
+
+.content {
+    margin: 0 auto;
+    width: 640px;
+    text-align: center;
+}
+
+.mainTitle {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    padding-top: 76px;
+}
+
+.appleIcon {
+    display: block;
+    width: 309px;
+    height: 230px;
+    background: url('./images/apple.png') no-repeat center center;
+    margin: 0 auto;
+}
+
+.description {
+    width: 530px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.hint {
+    width: 584px;
+    margin: 40px auto 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+.questionnaire {
+    margin-top: 50px;
+}
+
+.option {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    height: 48px;
+    text-align: left;
+    padding: 15px 17px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.optionChecked {
+    color: #000000;
+    background: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.questionCheckbox {
+
+}
+
+.questionLabel {
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    margin-left: 10px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.submit {
+    box-sizing: border-box;
+    background: #F0FF79;
+    border-radius: 4px;
+    height: 48px;
+    padding: 15px 17px;
+    margin-top: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    vertical-align: center;
+    cursor: pointer;
+}
+
+.arrow_submit {
+    display: inline-block;
+    width: 32px;
+    height: 8px;
+    background: url('./images/arrow_submit.png') no-repeat left center;
+    margin-bottom: 4px;
+}

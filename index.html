@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sravni Azbuka</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+</head>
+<body>
+    <div class="sravniLogo">
+        <a href="#" class="logoLink" target="_blank"><span class="sravniIcon"></span></a>
+    </div>
+    <div class="azbukaLogo">
+        <a href="#" class="logoLink" target="_blank"><span class="azbukaIcon"></span></a>
+    </div>
+    <div class="content">
+        <h1 class="mainTitle">Индекс Айфона</h1>
+        <span class="appleIcon"></span>
+        <h2 class="description">Посчитайте, за какое время вы проедаете стоимость нового гаджета</h2>
+        <p class="hint">Поставьте галочки, если это о вас, и мы покажем, что обычно покупает москвич с вашими предпочтениями, статусом и образом жизни и переведем стоимость продуктов в Айфоны.</p>
+        <div id="questionnaire" class="questionnaire">
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="vegetarian" name="vegetarian"/>
+                <label class="questionLabel" for="vegetarian">Я вегетарианец</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="vegan" name="vegan"/>
+                <label class="questionLabel" for="vegan">Я веган</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="healthyEating" name="healthyEating"/>
+                <label class="questionLabel" for="healthyEating">Я за здоровое питание</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="hardWorker" name="hardWorker"/>
+                <label class="questionLabel" for="hardWorker">Я трудоголик и редко ем дома</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="remoteWork" name="remoteWork"/>
+                <label class="questionLabel" for="remoteWork">Я на удаленке</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="kids" name="kids"/>
+                <label class="questionLabel" for="kids">У меня есть дети</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="pets" name="pets"/>
+                <label class="questionLabel" for="pets">У меня есть пёс (кот)</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/>
+                <label class="questionLabel" for="forbidden">Я люблю запрещенку</label>
+            </div>
+        </div>
+        <div class="submit">
+            Сформировать шоппинг-лист <span class="arrow_submit"></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
