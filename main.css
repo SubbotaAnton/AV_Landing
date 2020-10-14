@@ -257,15 +257,10 @@ header {
     float: right;
 }
 
-.vegetablesAndMelonsBlock {
-    background: #03BD5B;
-}
 
-.vegetablesAndMelonsBlock .foodBlockIcon {
-    background-image: url('./images/veg.png');
-    width: 38px;
-    height: 36px;
-}
+/* блоки корзин продуктов */
+
+/* мясо */
 
 .meatBlock {
     background: #D0021B;
@@ -277,4 +272,300 @@ header {
     height: 36px;
 }
 
+/* рыба */
+
+.fishBlock {
+    background: #5079E2;
+}
+
+.fishBlock .foodBlockIcon {
+    background-image: url('./images/fish.png');
+    width: 36px;
+    height: 36px;
+}
+
+/* овощи и зелень */
+
+
+.vegetablesAndHerbsBlock {
+    background: #03BD5B;
+}
+
+.vegetablesAndHerbsBlock .foodBlockIcon {
+    background-image: url('./images/veg.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* фрукты и ягоды */
+/* картинка и цвет TODO */
+
+.fruitsAndBerriesBlock {
+    background: orange;
+}
+
+.fruitsAndBerriesBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* яйца */
+/* картинка и цвет TODO */
+
+.eggsBlock {
+    background: orange;
+}
+
+.eggsBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* молоко */
+/* картинка и цвет TODO */
+
+.milkBlock {
+    background: orange;
+}
+
+.milkBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* хлеб */
+/* картинка и цвет TODO */
+
+.breadBlock {
+    background: orange;
+}
+
+.breadBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* крупы */
+/* картинка и цвет TODO */
+
+.cerealsBlock {
+    background: orange;
+}
+
+.cerealsBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* сладкое */
+/* картинка и цвет TODO */
+
+.sweetBlock {
+    background: orange;
+}
+
+.sweetBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* масло */
+
+.oilBlock {
+    background: orange;
+}
+
+.oilBlock .foodBlockIcon {
+    background-image: url('./images/oil.svg');
+    width: 29px;
+    height: 36px;
+}
+
+/* консервы */
+/* картинка и цвет TODO */
+
+.cannedFoodBlock {
+    background: orange;
+}
+
+.cannedFoodBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* замороженное */
+/* картинка и цвет TODO */
+
+.frozenFoodBlock {
+    background: orange;
+}
+
+.frozenFoodBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* готовая еда */
+/* картинка и цвет TODO */
+
+.readyMealBlock {
+    background: orange;
+}
+
+.readyMealBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* деликатессы */
+/* картинка и цвет TODO */
+
+.delicaciesBlock {
+    background: orange;
+}
+
+.delicaciesBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* детские товары 0-3 года */
+/* картинка и цвет TODO */
+
+.babyBlock {
+    background: orange;
+}
+
+.babyBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* детские товары 3+ года */
+/* картинка и цвет TODO */
+
+.childBlock {
+    background: orange;
+}
+
+.childBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* товары для кошек */
+/* картинка и цвет TODO */
+
+.catsBlock {
+    background: orange;
+}
+
+.catsBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* товары для собак */
+/* картинка и цвет TODO */
+
+.dogsBlock {
+    background: orange;
+}
+
+.dogsBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* замена мясу и рыбе */
+/* картинка и цвет TODO */
+
+.replaceMeatAndFishBlock {
+    background: orange;
+}
+
+.replaceMeatAndFishBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* замена мясу и рыбе */
+/* картинка и цвет TODO */
+
+.replaceMeatAndFishBlock {
+    background: orange;
+}
+
+.replaceMeatAndFishBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* зелень */
+/* картинка и цвет TODO */
+
+.herbsBlock {
+    background: orange;
+}
+
+.herbsBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* орехи и крупы */
+/* картинка и цвет TODO */
+
+.nutsAndCerealsBlock {
+    background: orange;
+}
+
+.nutsAndCerealsBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* замена молока */
+/* картинка и цвет TODO */
+
+.replaceMilkBlock {
+    background: orange;
+}
+
+.replaceMilkBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
+
+/* ЗОЖ */
+/* картинка и цвет TODO */
+
+.healthBlock {
+    background: orange;
+}
+
+.healthBlock .foodBlockIcon {
+    background-image: url('./images/none.png');
+    width: 38px;
+    height: 36px;
+}
 
