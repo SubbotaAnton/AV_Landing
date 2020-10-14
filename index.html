@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sravni Azbuka</title>
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="./mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Chart.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
 <body class="mainBackground">
@@ -40,10 +41,16 @@
                 <input type="checkbox" class="questionCheckbox" id="remoteWork" name="remoteWork"/><label class="questionLabel" for="remoteWork">Я на удаленке</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="kids" name="kids"/><label class="questionLabel" for="kids">У меня есть дети</label>
+                <input type="checkbox" class="questionCheckbox" id="baby" name="baby"/><label class="questionLabel" for="baby">У меня есть ребенок до 3 лет</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="pets" name="pets"/><label class="questionLabel" for="pets">У меня есть пёс (кот)</label>
+                <input type="checkbox" class="questionCheckbox" id="child" name="child"/><label class="questionLabel" for="child">У меня есть ребенок старше 3 лет</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="dog" name="dog"/><label class="questionLabel" for="dog">У меня есть пёс</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" class="questionCheckbox" id="cat" name="cat"/><label class="questionLabel" for="cat">У меня есть кот</label>
             </div>
             <div class="option">
                 <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/><label class="questionLabel" for="forbidden">Я люблю запрещенку</label>
@@ -63,14 +70,16 @@
     <div class="content hidden" id="step_3">
         <div class="result">
             <p class="eatingIphone" id="eating_iphone">Вы проедаете Айфон за 2 месяца. Это быстрее на 66%, чем средний москвич</p>
-            <div class="diagram" id="diagram">Здесь будет диаграмма</div>
+            <div class="diagram">
+                <canvas id="pieChart" width="400" height="400"></canvas>
+            </div>
             <div class="share" id="share">Здесь будет поделиться</div>
             <div class="foodBlocksWrapper">
                 <p class="foodBlocksTitle">Шоппинг-лист на месяц</p>
 
                 <!--    Мясо              -->
 
-                <div class="foodBlock meatBlock" id="foodBlock_1">
+                <div class="foodBlock meatBlock hidden" id="foodBlock_1">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Мясо и мясные продукты</p>
                     <ul>
@@ -133,7 +142,7 @@
 
                 <!--    РЫБА               -->
 
-                <div class="foodBlock fishBlock" id="foodBlock_2">
+                <div class="foodBlock fishBlock hidden" id="foodBlock_2">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Рыба и рыбные продукты</p>
                     <ul>
@@ -151,7 +160,7 @@
 
                 <!--    ОВОЩИ И ЗЕЛЕНЬ                -->
 
-                <div class="foodBlock vegetablesAndHerbsBlock" id="foodBlock_3">
+                <div class="foodBlock vegetablesAndHerbsBlock hidden" id="foodBlock_3">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Овощи и зелень</p>
                     <ul>
@@ -184,7 +193,7 @@
 
                 <!--    ФРУКТЫ И ЯГОДЫ               -->
 
-                <div class="foodBlock fruitsAndBerriesBlock" id="foodBlock_4">
+                <div class="foodBlock fruitsAndBerriesBlock hidden" id="foodBlock_4">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Фрукты и ягоды</p>
                     <ul>
@@ -202,7 +211,7 @@
 
                 <!--    Яйца              -->
 
-                <div class="foodBlock eggsBlock" id="foodBlock_5">
+                <div class="foodBlock eggsBlock hidden" id="foodBlock_5">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Яйца</p>
                     <ul>
@@ -220,7 +229,7 @@
 
                 <!--    Молоко              -->
 
-                <div class="foodBlock milkBlock" id="foodBlock_6">
+                <div class="foodBlock milkBlock hidden" id="foodBlock_6">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Молоко</p>
                     <ul>
@@ -238,7 +247,7 @@
 
                 <!--    Хлеб              -->
 
-                <div class="foodBlock breadBlock" id="foodBlock_7">
+                <div class="foodBlock breadBlock hidden" id="foodBlock_7">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Хлеб</p>
                     <ul>
@@ -256,7 +265,7 @@
 
                 <!--    Крупы              -->
 
-                <div class="foodBlock cerealsBlock" id="foodBlock_8">
+                <div class="foodBlock cerealsBlock hidden" id="foodBlock_8">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Крупы</p>
                     <ul>
@@ -274,7 +283,7 @@
 
                 <!--    Сладкое              -->
 
-                <div class="foodBlock sweetBlock" id="foodBlock_9">
+                <div class="foodBlock sweetBlock hidden" id="foodBlock_9">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Сладкое</p>
                     <ul>
@@ -292,7 +301,7 @@
 
                 <!--    Масло              -->
 
-                <div class="foodBlock oilBlock" id="foodBlock_10">
+                <div class="foodBlock oilBlock hidden" id="foodBlock_10">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Масло</p>
                     <ul>
@@ -310,7 +319,7 @@
 
                 <!--    Консервы              -->
 
-                <div class="foodBlock cannedFoodBlock" id="foodBlock_11">
+                <div class="foodBlock cannedFoodBlock hidden" id="foodBlock_11">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Консервы</p>
                     <ul>
@@ -328,7 +337,7 @@
 
                 <!--    Замороженное              -->
 
-                <div class="foodBlock frozenFoodBlock" id="foodBlock_12">
+                <div class="foodBlock frozenFoodBlock hidden" id="foodBlock_12">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Замороженная еда</p>
                     <ul>
@@ -346,7 +355,7 @@
 
                 <!--    Готовая еда              -->
 
-                <div class="foodBlock readyMealBlock" id="foodBlock_13">
+                <div class="foodBlock readyMealBlock hidden" id="foodBlock_13">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Готовая еда</p>
                     <ul>
@@ -364,7 +373,7 @@
 
                 <!--    Деликатессы              -->
 
-                <div class="foodBlock delicaciesBlock" id="foodBlock_14">
+                <div class="foodBlock delicaciesBlock hidden" id="foodBlock_14">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Деликатессы</p>
                     <ul>
@@ -382,7 +391,7 @@
 
                 <!--    Детские товары 0-3 года             -->
 
-                <div class="foodBlock babyBlock" id="foodBlock_15">
+                <div class="foodBlock babyBlock hidden" id="foodBlock_15">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Детские товары 0-3 года</p>
                     <ul>
@@ -400,7 +409,7 @@
 
                 <!--    Детские товары 3+ года             -->
 
-                <div class="foodBlock childBlock" id="foodBlock_16">
+                <div class="foodBlock childBlock hidden" id="foodBlock_16">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Детские товары 3+ </p>
                     <ul>
@@ -418,7 +427,7 @@
 
                 <!--    Товары для кошек             -->
 
-                <div class="foodBlock catsBlock" id="foodBlock_17">
+                <div class="foodBlock catsBlock hidden" id="foodBlock_17">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Товары для кошек</p>
                     <ul>
@@ -437,7 +446,7 @@
 
                 <!--    Товары для собак             -->
 
-                <div class="foodBlock dogsBlock" id="foodBlock_18">
+                <div class="foodBlock dogsBlock hidden" id="foodBlock_18">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Товары для собак</p>
                     <ul>
@@ -455,7 +464,7 @@
 
                 <!--    Вместо мяса и рыбы             -->
 
-                <div class="foodBlock replaceMeatAndFishBlock" id="foodBlock_19">
+                <div class="foodBlock replaceMeatAndFishBlock hidden" id="foodBlock_19">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Вместо мяса и рыбы</p>
                     <ul>
@@ -473,7 +482,7 @@
 
                 <!--    Зелень           -->
 
-                <div class="foodBlock herbsBlock" id="foodBlock_20">
+                <div class="foodBlock herbsBlock hidden" id="foodBlock_20">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Зелень</p>
                     <ul>
@@ -491,7 +500,7 @@
 
                 <!--    Орехи и крупы           -->
 
-                <div class="foodBlock nutsAndCerealsBlock" id="foodBlock_21">
+                <div class="foodBlock nutsAndCerealsBlock hidden" id="foodBlock_21">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Орехи и крупы</p>
                     <ul>
@@ -509,7 +518,7 @@
 
                 <!--    Замена молока           -->
 
-                <div class="foodBlock replaceMilkBlock" id="foodBlock_22">
+                <div class="foodBlock replaceMilkBlock hidden" id="foodBlock_22">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">Замена молока</p>
                     <ul>
@@ -527,7 +536,7 @@
 
                 <!--    ЗОЖ           -->
 
-                <div class="foodBlock healthBlock" id="foodBlock_23">
+                <div class="foodBlock healthBlock hidden" id="foodBlock_23">
                     <div class="foodBlockIcon"></div>
                     <p class="foodBlockTitle">ЗОЖ</p>
                     <ul>
@@ -547,6 +556,8 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./scripts/Chart.min.js"></script>
+    <script type="text/javascript" src="./scripts/chartjs-plugin-doughnutlabel.min.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
 </body>
 </html>
