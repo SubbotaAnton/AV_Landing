@@ -2,59 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sravni Azbuka</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./mobile.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
-<body>
-    <div class="sravniLogo">
-        <a href="#" class="logoLink" target="_blank"><span class="sravniIcon"></span></a>
-    </div>
-    <div class="azbukaLogo">
-        <a href="#" class="logoLink" target="_blank"><span class="azbukaIcon"></span></a>
-    </div>
-    <div class="content">
+<body class="mainBackground">
+    <header>
+        <div class="sravniLogo">
+            <a href="#" class="logoLink" target="_blank"><span class="sravniIcon"></span></a>
+        </div>
+        <div class="azbukaLogo">
+            <a href="#" class="logoLink" target="_blank"><span class="azbukaIcon"></span></a>
+        </div>
+    </header>
+    <div class="content" id="step_1">
         <h1 class="mainTitle">Индекс Айфона</h1>
         <span class="appleIcon"></span>
         <h2 class="description">Посчитайте, за какое время вы проедаете стоимость нового гаджета</h2>
         <p class="hint">Поставьте галочки, если это о вас, и мы покажем, что обычно покупает москвич с вашими предпочтениями, статусом и образом жизни и переведем стоимость продуктов в Айфоны.</p>
         <div id="questionnaire" class="questionnaire">
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="vegetarian" name="vegetarian"/>
-                <label class="questionLabel" for="vegetarian">Я вегетарианец</label>
+                <input type="checkbox" class="questionCheckbox" id="vegetarian" name="vegetarian"/><label class="questionLabel" for="vegetarian">Я вегетарианец</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="vegan" name="vegan"/>
-                <label class="questionLabel" for="vegan">Я веган</label>
+                <input type="checkbox" class="questionCheckbox" id="vegan" name="vegan"/><label class="questionLabel" for="vegan">Я веган</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="healthyEating" name="healthyEating"/>
-                <label class="questionLabel" for="healthyEating">Я за здоровое питание</label>
+                <input type="checkbox" class="questionCheckbox" id="healthyEating" name="healthyEating"/><label class="questionLabel" for="healthyEating">Я за здоровое питание</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="hardWorker" name="hardWorker"/>
-                <label class="questionLabel" for="hardWorker">Я трудоголик и редко ем дома</label>
+                <input type="checkbox" class="questionCheckbox" id="hardWorker" name="hardWorker"/><label class="questionLabel" for="hardWorker">Я трудоголик и редко ем дома</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="remoteWork" name="remoteWork"/>
-                <label class="questionLabel" for="remoteWork">Я на удаленке</label>
+                <input type="checkbox" class="questionCheckbox" id="remoteWork" name="remoteWork"/><label class="questionLabel" for="remoteWork">Я на удаленке</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="kids" name="kids"/>
-                <label class="questionLabel" for="kids">У меня есть дети</label>
+                <input type="checkbox" class="questionCheckbox" id="kids" name="kids"/><label class="questionLabel" for="kids">У меня есть дети</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="pets" name="pets"/>
-                <label class="questionLabel" for="pets">У меня есть пёс (кот)</label>
+                <input type="checkbox" class="questionCheckbox" id="pets" name="pets"/><label class="questionLabel" for="pets">У меня есть пёс (кот)</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/>
-                <label class="questionLabel" for="forbidden">Я люблю запрещенку</label>
+                <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/><label class="questionLabel" for="forbidden">Я люблю запрещенку</label>
             </div>
         </div>
-        <div class="submit">
+        <div class="submit" id="submit">
             Сформировать шоппинг-лист <span class="arrow_submit"></span>
+        </div>
+    </div>
+
+    <div class="content hidden" id="step_2">
+        <div class="loading">
+            Корзина формируется...
+        </div>
+    </div>
+
+    <div class="content hidden" id="step_3">
+        <div class="result">
+            <p class="eatingIphone" id="eating_iphone">Вы проедаете Айфон за 2 месяца. Это быстрее на 66%, чем средний москвич</p>
+            <div class="diagram" id="diagram">Здесь будет диаграмма</div>
+            <div class="share" id="share">Здесь будет поделиться</div>
+            <div class="foodBlocksWrapper">
+                <p class="foodBlocksTitle">Шоппинг-лист на месяц</p>
+
+                <div class="foodBlock vegetablesAndMelonsBlock">
+                    <div class="foodBlockIcon"></div>
+                    <p class="foodBlockTitle">Овощи и бахчевые</p>
+                    <ul>
+                        <li class="foodBlockItem">
+                            <p class="foodBlockFoodName">Лук репчатый фасованный</p>
+                            <p class="foodBlockFoodPrice">1 кг (49 руб за 500 гр)</p>
+                            <span class="foodBlockSeparator"></span>
+                        </li>
+                        <li class="foodBlockItem">
+                            <p class="foodBlockFoodName">Чеснок 1 уп. Китай</p>
+                            <p class="foodBlockFoodPrice">300 гр (86 руб за 150 гр)</p>
+                            <span class="foodBlockSeparator"></span>
+                        </li>
+                        <li class="foodBlockItem">
+                            <p class="foodBlockFoodName">Помидоры сливовидные грунтовые</p>
+                            <p class="foodBlockFoodPrice">1 кг (98 руб за 1 кг)</p>
+                            <span class="foodBlockSeparator"></span>
+                        </li>
+                    </ul>
+                    <p class="foodBlockResult">
+                        <span class="foodBlockResultText">Итого в месяц:</span>
+                        <span class="foodBlockResultValue">30 000 ₽</span>
+                    </p>
+                </div>
+                <div class="foodBlock meatBlock">
+                    <div class="foodBlockIcon"></div>
+                    <p class="foodBlockTitle">Мясо и мясные продукты</p>
+                    <ul>
+                        <li class="foodBlockItem">
+                            <p class="foodBlockFoodName">Колбаса варёная «Докторская» от Татьяны Ерёмкиной, «Наша ферма», Московская область </p>
+                            <p class="foodBlockFoodPrice">900 гр (118,90 рублей за 100 гр)</p>
+                            <span class="foodBlockSeparator"></span>
+                        </li>
+                        <li class="foodBlockItem">
+                            <p class="foodBlockFoodName">Рулька свиная охлажденная Мираторг Россия</p>
+                            <p class="foodBlockFoodPrice">1100 гр (245,30 рублей за 1 шт)</p>
+                            <span class="foodBlockSeparator"></span>
+                        </li>
+                        <li class="foodBlockItem">
+                            <p class="foodBlockFoodName">Колбаса Велком Торро с/к Россия</p>
+                            <p class="foodBlockFoodPrice">500 гр (85,90 руб за 100 гр)</p>
+                            <span class="foodBlockSeparator"></span>
+                        </li>
+                    </ul>
+                    <p class="foodBlockResult">
+                        <span class="foodBlockResultText">Итого в месяц:</span>
+                        <span class="foodBlockResultValue">25 000 ₽</span>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 

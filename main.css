@@ -3,12 +3,22 @@ html, body {
 }
 
 body {
-    background: linear-gradient(180deg, #9DD157 0%, #80BB3D 100%);
     position: relative;
     font-family: Ubuntu, "Times New Roman", serif;
     color: #ffffff;
     min-height:100vh;
-    padding-bottom: 140px;
+}
+
+header {
+    height: 93px;
+}
+
+.mainBackground {
+    background: linear-gradient(180deg, #9DD157 0%, #80BB3D 100%);
+}
+
+.hidden {
+    display: none !important;
 }
 
 .logoLink {
@@ -25,7 +35,7 @@ body {
 
 .sravniIcon {
     display: block;
-    width: 128px;
+    width: 129px;
     height: 24px;
     background: url('./images/sravni_logo.png') no-repeat left top;
 }
@@ -44,12 +54,15 @@ body {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 640px;
     text-align: center;
 }
 
 .mainTitle {
+    order: 1;
     font-weight: bold;
     font-size: 48px;
     line-height: 55px;
@@ -57,6 +70,7 @@ body {
 }
 
 .appleIcon {
+    order: 2;
     display: block;
     width: 309px;
     height: 230px;
@@ -65,6 +79,7 @@ body {
 }
 
 .description {
+    order: 3;
     width: 530px;
     margin: 0 auto;
     font-size: 24px;
@@ -73,6 +88,7 @@ body {
 }
 
 .hint {
+    order: 4;
     width: 584px;
     margin: 40px auto 0;
     font-size: 16px;
@@ -81,6 +97,7 @@ body {
 }
 
 .questionnaire {
+    order: 5;
     margin-top: 50px;
 }
 
@@ -109,13 +126,14 @@ body {
     text-transform: uppercase;
     font-size: 17px;
     line-height: 20px;
-    margin-left: 10px;
+    margin-left: 13px;
     -moz-user-select: none;
     -khtml-user-select: none;
     user-select: none;
 }
 
 .submit {
+    order: 6;
     box-sizing: border-box;
     background: #F0FF79;
     border-radius: 4px;
@@ -132,6 +150,7 @@ body {
     user-select: none;
     vertical-align: center;
     cursor: pointer;
+    margin-bottom: 140px;
 }
 
 .arrow_submit {
@@ -141,3 +160,121 @@ body {
     background: url('./images/arrow_submit.png') no-repeat left center;
     margin-bottom: 4px;
 }
+
+.loading {
+    padding-top: 280px;
+}
+
+.result {
+    padding-top: 93px;
+    color: #000000;
+}
+
+.eatingIphone {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.diagram {
+    margin: 15px 0;
+}
+
+.share {
+    margin: 15px 0;
+}
+
+.foodBlocksWrapper {
+    margin-bottom: 70px;
+}
+
+.foodBlocksTitle {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.foodBlock {
+    position: relative;
+    border-radius: 16px;
+    padding: 24px 26px;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 25px;
+}
+
+.foodBlockTitle {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.foodBlockIcon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-repeat: no-repeat;
+}
+
+.foodBlockItem {
+    display: block;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.foodBlockFoodName {
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.7;
+    margin-bottom: 7px;
+}
+
+.foodBlackFoodPrice {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.foodBlockSeparator {
+    display: block;
+    height: 1px;
+    opacity: 0.4;
+    border-bottom: 1px solid #FFFFFF;
+    margin-top: 8px;
+}
+
+.foodBlockResult {
+    overflow: hidden;
+    margin: 20px 0 13px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.foodBlockResultText {
+    float: left;
+}
+
+.foodBlockResultValue {
+    float: right;
+}
+
+.vegetablesAndMelonsBlock {
+    background: #03BD5B;
+}
+
+.vegetablesAndMelonsBlock .foodBlockIcon {
+    background-image: url('./images/veg.png');
+    width: 38px;
+    height: 36px;
+}
+
+.meatBlock {
+    background: #D0021B;
+}
+
+.meatBlock .foodBlockIcon {
+    background-image: url('./images/meat.png');
+    width: 36px;
+    height: 36px;
+}
+
+
