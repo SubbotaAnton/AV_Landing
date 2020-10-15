@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--   meta for sharing -->
+    <meta property="og:url"             content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type"            content="website" />
+    <meta property="og:title"           content="Как быстро я проедаю свой айфон" />
+    <meta property="og:description"     content="Your description" />
+    <meta property="og:image"           content="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw3aJ9e6-HA8xoRuFLMWZj31951MTls54_PA&usqp=CAU" />
+    <!--   meta for sharing -->
+
     <title>Sravni Azbuka</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/mobile.css" />
     <link rel="stylesheet" type="text/css" href="./css/Chart.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <!-- Put this script tag to the <head> of your page -->
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
 </head>
 <body class="mainBackground">
     <header>
@@ -74,7 +86,22 @@
             <div class="diagram">
                 <canvas id="pieChart" width="400" height="400"></canvas>
             </div>
-            <div class="share" id="share">Здесь будет поделиться</div>
+            <div class="share" id="share">
+                <div id="vk_share">
+                    <!-- Put this script tag to the place, where the Share button will be -->
+                    <script type="text/javascript">
+                        // https://vk.com/dev/widget_share
+                        document.write(VK.Share.button(
+                            false,
+                            // {
+                            //     title: 'Я проедаю айфон за 2 месяца',
+                            //     image: '' // TODO absolute link to share image
+                            // },
+                            {type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}
+                        ));
+                    </script>
+                </div>
+            </div>
             <div class="foodBlocksWrapper">
                 <p class="foodBlocksTitle">Шоппинг-лист на месяц</p>
 
