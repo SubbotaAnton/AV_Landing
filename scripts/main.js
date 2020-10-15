@@ -12,7 +12,7 @@
             usual: [3, 4, 5, 6, 7, 8, 9, 10]
         },
         healthyEating: {
-            important: [8, 23],
+            important: [8, 20, 21, 23],
             forbidden: [1],
             usual: [3, 4, 5, 6, 7, 9, 10]
         },
@@ -115,7 +115,7 @@
         },
         13: {
             description: 'готовая еда',
-            value: 1089,
+            value: 12090,
             color: 'rgb(3, 189, 91)'
         },
         14: {
@@ -128,35 +128,35 @@
         },
         16: {
             description: 'детские товары 3+',
-            value: 1000,
+            value: 16579.1,
         },
         17: {
             description: 'кошки',
-            value: 1000,
+            value: 6063,
         },
         18: {
             description: 'собаки',
-            value: 1000,
+            value: 4760,
         },
         19: {
             description: 'вместо мяса и рыбы',
-            value: 1000,
+            value: 6023.6,
         },
         20: {
             description: 'зелень',
-            value: 1000,
+            value: 3236,
         },
         21: {
             description: 'орехи и крупы',
-            value: 1000,
+            value: 4291,
         },
         22: {
             description: 'вместо молока',
-            value: 1000,
+            value: 8381,
         },
         23: {
             description: 'ЗОЖ',
-            value: 1000,
+            value: 12275.25,
         },
     }
 
@@ -230,10 +230,22 @@
         document.getElementsByTagName('body')[0].classList.remove('mainBackground');
         document.getElementsByTagName('header')[0].classList.add('mainBackground');
 
-
-        const months = 2;
-        const speed = 66;
-        document.getElementById('eating_iphone').innerHTML = `Вы проедаете Айфон за ${months} месяца. Это быстрее на ${speed}%, чем средний москвич`;
+        const iphonePrice = 79990;
+        const expense = blockLists.reduce((acc, block) => {
+            return acc + dictionary[block].value;
+        }, 0);
+        const basicExpense = 23870;
+        const months = Math.round(iphonePrice / expense * 10) / 10;
+        let compare;
+        let speed;
+        if (expense > basicExpense) {
+            compare = 'быстрее';
+            speed = Math.round((expense / basicExpense) * 100 - 100);
+        } else {
+            compare = 'медленее'
+            speed = Math.round((basicExpense / expense) * 100 - 100);
+        }
+        document.getElementById('eating_iphone').innerHTML = `Вы проедаете Айфон за ${months} месяца. Это ${compare} на ${speed}%, чем средний москвич`;
 
         initChart(blockLists);
     }
@@ -314,7 +326,7 @@
             labels: labels
         };
 
-        const myDoughnutChart = new Chart(ctx, {
+        new Chart(ctx, {
             type: 'doughnut',
             data,
             options: {

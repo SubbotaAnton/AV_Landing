@@ -162,11 +162,19 @@ header {
 }
 
 .loading {
-    padding-top: 280px;
+    padding-top: 180px;
+}
+
+.loadingIcon {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 96px;
+    background: url('../images/loading.svg') no-repeat center center;
 }
 
 .result {
-    padding-top: 93px;
+    padding-top: 50px;
     color: #000000;
 }
 
