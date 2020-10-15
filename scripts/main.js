@@ -255,15 +255,46 @@
         let compare;
         let speed;
         if (expense > basicExpense) {
-            compare = 'быстрее';
+            compare = 'меньше';
             speed = Math.round((expense / basicExpense) * 100 - 100);
         } else {
-            compare = 'дольше'
+            compare = 'больше'
             speed = Math.round((basicExpense / expense) * 100 - 100);
         }
         document.getElementById('eating_iphone').innerHTML = `Вы можете питаться на стоимость Айфона ${months} месяца. Это ${compare} на ${speed}%, чем средний москвич`;
 
         initChart(blockLists);
+
+        const shareText = `Я могу питаться на стоимость Айфона ${months} месяца. Это на ${speed}% ${compare}, чем средний москвич.`;
+        const absoluteURL = 'https%3A%2F%2Fwww.sravni.ru%2Fpromo%2Fazbuka-vkusa%2F';
+
+        // vk share
+        document.getElementById('vk_share').innerHTML = VK.Share.button(
+            {
+                title: shareText,
+                image: 'https://www.sravni.ru/wp-content/themes/sravniru/assets/landing/azbuka-vkusa/images/apple.png'
+            },
+            {
+                type: 'custom',
+                text: '<div class="vkShare"></div>'
+            }
+        );
+
+        // fb share
+        document.getElementById('fb_share').addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${absoluteURL}`;
+            const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+            window.open(url,'sharer',options);
+        });
+
+        // twitter share
+        document.getElementById('twitter_share').addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = `https://twitter.com/intent/tweet?text=${encodeURI(shareText)}&url=${absoluteURL}`;
+            const options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+            window.open(url,'sharer',options);
+        });
     }
 
     function showBlocks(blocks) {
@@ -344,6 +375,12 @@
             labels: labels
         };
 
+        const fullExpense = () => {
+            const value = Math.round(getTotal()).toString();
+            let updatedValue = `${value.slice(0, value.length - 3)} ${value.slice(value.length - 3)}`;
+            return `${updatedValue} ₽`;
+        }
+
         new Chart(ctx, {
             type: 'doughnut',
             data,
@@ -362,7 +399,7 @@
                                 color: 'black'
                             },
                             {
-                                text: `${getTotal().toFixed(2)} ₽`,
+                                text: fullExpense(),
                                 font: {
                                     size: '24'
                                 },
