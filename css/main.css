@@ -316,14 +316,15 @@ header {
 }
 
 /* фрукты и ягоды */
-/* цвет TODO */
 
 .fruitsAndBerriesBlock {
-    background: orange;
+    background: #FF001F;
 }
 
 .fruitsAndBerriesBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/fruitsAndBerries.svg');
+    width: 36px;
+    height: 36px;
 }
 
 /* яйца */
@@ -405,7 +406,9 @@ header {
 }
 
 .cannedFoodBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/cannedFood.svg');
+    width: 26px;
+    height: 48px;
 }
 
 /* замороженное */
@@ -415,7 +418,9 @@ header {
 }
 
 .frozenFoodBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/frozenFood.svg');
+    width: 32px;
+    height: 36px;
 }
 
 /* готовая еда */
@@ -425,127 +430,128 @@ header {
 }
 
 .readyMealBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/readyMeal.svg');
+    width: 30px;
+    height: 32px;
 }
 
 /* деликатессы */
-/* цвет TODO */
 
 .delicaciesBlock {
-    background: orange;
+    background: #CE0057;
 }
 
 .delicaciesBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/delicacies.svg');
+    width: 38px;
+    height: 36px;
 }
 
 /* детские товары 0-3 года */
-/* цвет TODO */
 
 .babyBlock {
-    background: orange;
+    background: #89C644;
 }
 
 .babyBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/baby.svg');
+    width: 38px;
+    height: 36px;
 }
 
 /* детские товары 3+ года */
-/* цвет TODO */
 
 .childBlock {
-    background: orange;
+    background: #44C6C6;
 }
 
 .childBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/childs.svg');
+    width: 40px;
+    height: 36px;
 }
 
 /* товары для кошек */
-/* цвет TODO */
 
 .catsBlock {
-    background: orange;
+    background: #00848C;
 }
 
 .catsBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/cats.svg');
+    width: 33px;
+    height: 36px;
 }
 
 /* товары для собак */
-/* цвет TODO */
 
 .dogsBlock {
-    background: orange;
+    background: #555555;
 }
 
 .dogsBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/dogs.svg');
+    width: 32px;
+    height: 36px;
 }
 
 /* замена мясу и рыбе */
-/* цвет TODO */
 
 .replaceMeatAndFishBlock {
-    background: orange;
+    background: #7800D6;
 }
 
 .replaceMeatAndFishBlock .foodBlockIcon {
-    display: none;
-}
-
-/* замена мясу и рыбе */
-/* цвет TODO */
-
-.replaceMeatAndFishBlock {
-    background: orange;
-}
-
-.replaceMeatAndFishBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/replaceMeatAndFish.svg');
+    width: 34px;
+    height: 36px;
 }
 
 /* зелень */
-/* цвет TODO */
 
 .herbsBlock {
-    background: orange;
+    background: #89C644;
 }
 
 .herbsBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/herbs.svg');
+    width: 38px;
+    height: 36px;
 }
 
 /* орехи и крупы */
-/* цвет TODO */
 
 .nutsAndCerealsBlock {
-    background: orange;
+    background: #FF9431;
 }
 
 .nutsAndCerealsBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/cereals.svg');
+    width: 36px;
+    height: 36px;
 }
 
 /* замена молока */
-/* цвет TODO */
 
 .replaceMilkBlock {
-    background: orange;
+    background: #5079E2;
 }
 
 .replaceMilkBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/milk.svg');
+    width: 26px;
+    height: 36px;
 }
 
 /* ЗОЖ */
-/* цвет TODO */
 
 .healthBlock {
-    background: orange;
+    background: #89C644;
 }
 
 .healthBlock .foodBlockIcon {
-    display: none;
+    background-image: url('../images/health.svg');
+    width: 22px;
+    height: 36px;
 }
 

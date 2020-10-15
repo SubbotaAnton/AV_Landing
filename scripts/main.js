@@ -72,6 +72,7 @@
         4: {
             description: 'фрукты и ягода',
             value: 1089,
+            color: 'rgb(255,0,31)'
         },
         5: {
             description: 'яйца',
@@ -121,42 +122,52 @@
         14: {
             description: 'деликатесы',
             value: 5940,
+            color: 'rgb(206,0,87)'
         },
         15: {
             description: 'детские товары 0-3 года',
             value: 17000,
+            color: 'rgb(137,198,68)'
         },
         16: {
             description: 'детские товары 3+',
             value: 16579.1,
+            color: 'rgb(68,198,198)'
         },
         17: {
             description: 'кошки',
             value: 6063,
+            color: 'rgb(0,132,140)'
         },
         18: {
             description: 'собаки',
             value: 4760,
+            color: 'rgb(85,85,85)'
         },
         19: {
             description: 'вместо мяса и рыбы',
             value: 6023.6,
+            color: 'rgb(120,0,214)'
         },
         20: {
             description: 'зелень',
             value: 3236,
+            color: 'rgb(137,198,68)'
         },
         21: {
             description: 'орехи и крупы',
             value: 4291,
+            color: 'rgb(245, 166, 35)'
         },
         22: {
             description: 'вместо молока',
             value: 8381,
+            color: 'rgb(80,121,226)'
         },
         23: {
             description: 'ЗОЖ',
             value: 12275.25,
+            color: 'rgb(137,198,68)'
         },
     }
 
