@@ -90,7 +90,7 @@
         },
         8: {
             description: 'крупы',
-            value: 1000,
+            value: undefined,
             color: 'rgb(245, 166, 35)'
         },
         9: {
@@ -105,7 +105,7 @@
         },
         11: {
             description: 'консервы',
-            value: 1000,
+            value: undefined,
             color: 'rgb(80, 121, 226)'
         },
         12: {
@@ -120,7 +120,7 @@
         },
         14: {
             description: 'деликатесы',
-            value: 1000,
+            value: 594,
         },
         15: {
             description: 'детские товары 0-3 года',
@@ -222,6 +222,13 @@
         }, 3000);
     }
 
+    function getTotal() {
+        const blockLists = resultToList();
+        return blockLists.reduce((acc, block) => {
+            return acc + (dictionary[block].value || 0);
+        }, 0);
+    }
+
     function step3Handlers() {
         const blockLists = resultToList();
         showBlocks(blockLists);
@@ -231,9 +238,7 @@
         document.getElementsByTagName('header')[0].classList.add('mainBackground');
 
         const iphonePrice = 79990;
-        const expense = blockLists.reduce((acc, block) => {
-            return acc + dictionary[block].value;
-        }, 0);
+        const expense = getTotal();
         const basicExpense = 23870;
         const months = Math.round(iphonePrice / expense * 10) / 10;
         let compare;
@@ -252,8 +257,10 @@
 
     function showBlocks(blocks) {
         blocks.forEach((block) => {
-            const el = document.getElementById(`foodBlock_${block}`).classList.remove('hidden');
-        })
+            if (dictionary[block].value) {
+                const el = document.getElementById(`foodBlock_${block}`).classList.remove('hidden');
+            }
+        });
     }
 
     function resultToList() {
@@ -302,11 +309,6 @@
     function initChart(blocks) {
         const ctx = document.getElementById('pieChart');
 
-        const getTotal = function (myDoughnutChart) {
-            const sum = myDoughnutChart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
-            return `${sum.toFixed(2)} ₽`;
-        }
-
         const values = blocks.reduce((acc, block) => {
             acc.push(dictionary[block].value);
             return acc;
@@ -349,7 +351,7 @@
                                 color: 'black'
                             },
                             {
-                                text: getTotal,
+                                text: `${getTotal().toFixed(2)} ₽`,
                                 font: {
                                     size: '24'
                                 },
