@@ -68,3 +68,9 @@
     }
 
 }
+
+@media only screen and (max-device-width : 400px) {
+    .arrow_submit {
+        display: none;
+    }
+}
