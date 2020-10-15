@@ -247,10 +247,10 @@
             compare = 'быстрее';
             speed = Math.round((expense / basicExpense) * 100 - 100);
         } else {
-            compare = 'медленее'
+            compare = 'дольше'
             speed = Math.round((basicExpense / expense) * 100 - 100);
         }
-        document.getElementById('eating_iphone').innerHTML = `Вы проедаете Айфон за ${months} месяца. Это ${compare} на ${speed}%, чем средний москвич`;
+        document.getElementById('eating_iphone').innerHTML = `Вы можете питаться на стоимость Айфона ${months} месяца. Это ${compare} на ${speed}%, чем средний москвич`;
 
         initChart(blockLists);
     }

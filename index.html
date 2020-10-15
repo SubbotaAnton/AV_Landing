@@ -7,8 +7,8 @@
     <!--   meta for sharing -->
     <meta property="og:url"             content="https://www.sravni.ru/promo/azbuka-vkusa/" />
     <meta property="og:type"            content="website" />
-    <meta property="og:title"           content="Как быстро я проедаю свой айфон" />
-    <meta property="og:description"     content="Your description" />
+    <meta property="og:title"           content="Индекс Айфона" />
+    <meta property="og:description"     content="Посчитайте, сколько времени вы сможете питаться на 79 990 рублей!" />
     <meta property="og:image"           content="https://www.sravni.ru/wp-content/themes/sravniru/assets/landing/azbuka-vkusa/images/apple.png" />
     <!--   meta for sharing -->
 
@@ -42,8 +42,10 @@
     <div class="content" id="step_1">
         <h1 class="mainTitle">Индекс Айфона</h1>
         <span class="appleIcon"></span>
-        <h2 class="description">Посчитайте, за какое время вы проедаете стоимость нового гаджета</h2>
-        <p class="hint">Поставьте галочки, если это о вас, и мы покажем, что обычно покупает москвич с вашими предпочтениями, статусом и образом жизни и переведем стоимость продуктов в Айфоны.</p>
+        <h2 class="description">Посчитайте, сколько времени вы сможете питаться на 79 990 рублей</h2>
+        <p class="hint">Новый Айфон 12 с памятью 64 гб стоит почти 80 тысяч рублей. Дорого ли это - зависит не только от вашей зарплаты, но и от расходов.</p>
+        <p class="hint">Это калькулятор, который показывает ваши примерные траты на еду и сравнивает их с ценой Айфона. А вас - со средним москвичом.</p>
+        <p class="hint">Поставьте галочки, если это о вас и посчитайте:</p>
         <div id="questionnaire" class="questionnaire">
             <div class="option">
                 <input type="checkbox" class="questionCheckbox" id="vegetarian" name="vegetarian"/><label class="questionLabel" for="vegetarian">Я вегетарианец</label>
@@ -73,11 +75,11 @@
                 <input type="checkbox" class="questionCheckbox" id="cat" name="cat"/><label class="questionLabel" for="cat">У меня есть кот</label>
             </div>
             <div class="option">
-                <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/><label class="questionLabel" for="forbidden">Я люблю запрещенку</label>
+                <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/><label class="questionLabel" for="forbidden">Я люблю деликатесы</label>
             </div>
         </div>
         <div class="submit" id="submit">
-            Сформировать шоппинг-лист <span class="arrow_submit"></span>
+            Рассчитать <span class="arrow_submit"></span>
         </div>
     </div>
 
@@ -90,7 +92,7 @@
 
     <div class="content hidden" id="step_3">
         <div class="result">
-            <p class="eatingIphone" id="eating_iphone">Вы проедаете Айфон за 2 месяца. Это быстрее на 66%, чем средний москвич</p>
+            <p class="eatingIphone" id="eating_iphone"></p>
             <div class="diagram">
                 <span class="pieChartIcon"></span>
                 <canvas id="pieChart" width="400" height="400"></canvas>
