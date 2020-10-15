@@ -261,6 +261,11 @@
         const important = [];
         const forbidden = [];
         const usual = [];
+
+        if (questionnaireResult.length === 0) {
+            return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        }
+
         questionnaireResult.forEach((item) => {
             const record = optionToTable[item];
             record.important.forEach((n) => {
