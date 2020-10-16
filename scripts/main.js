@@ -8,8 +8,8 @@
         },
         vegan: {
             important: [19, 20, 21, 22],
-            forbidden: [1, 2, 11, 12, 13],
-            usual: [3, 4, 5, 6, 7, 8, 9, 10]
+            forbidden: [1, 2, 5, 6, 11, 12, 13],
+            usual: [3, 4, 7, 8, 9, 10]
         },
         healthyEating: {
             important: [8, 20, 21, 23],
