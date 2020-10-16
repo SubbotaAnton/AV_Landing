@@ -37,7 +37,7 @@ header {
     display: block;
     width: 129px;
     height: 24px;
-    background: url('../images/sravni_logo.png') no-repeat left top;
+    background: url('../images/sravni_logo.svg') no-repeat left top;
 }
 
 .azbukaLogo {
@@ -50,7 +50,7 @@ header {
     display: block;
     width: 134px;
     height: 40px;
-    background: url('../images/azbuka_logo.png') no-repeat left top;
+    background: url('../images/azbuka_logo.svg') no-repeat left top;
 }
 
 .content {
@@ -473,7 +473,7 @@ header {
     height: 32px;
 }
 
-/* деликатессы */
+/* деликатесы */
 
 .delicaciesBlock {
     background: #CE0057;
