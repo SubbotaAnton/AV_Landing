@@ -86,7 +86,13 @@
                 <input type="checkbox" class="questionCheckbox" id="forbidden" name="forbidden"/><label class="questionLabel" for="forbidden">Я люблю деликатесы</label>
             </div>
         </div>
-        <div class="submit" id="submit">
+        <div class="submit" id="submit" 
+        data-event="adEvent" 
+        data-event-category="Прочее" 
+        data-event-action="Рассчитать" 
+        data-event-label="undefined" 
+        data-event-value="undefined" 
+        >
             Рассчитать <span class="arrow_submit"></span>
         </div>
     </div>
@@ -108,9 +114,27 @@
 
             <p class="shareTitle">Поделиться</p>
             <div class="share" id="share">
-                <div class="shareButton" id="vk_share"></div>
-                <div class="fbShare shareButton" id="fb_share"></div>
-                <div class="twitterShare shareButton" id="twitter_share"></div>
+                <div class="shareButton" id="vk_share" 
+                event="adEvent" 
+                event-category="Прочее" 
+                event-action="Поделиться" 
+                event-label="vk" 
+                event-value="undefined" 
+                ></div>
+                <div class="fbShare shareButton" id="fb_share"
+                event="adEvent" 
+                event-category="Прочее" 
+                event-action="Поделиться" 
+                event-label="facebook" 
+                event-value="undefined" 
+                ></div>
+                <div class="twitterShare shareButton" id="twitter_share"
+                event="adEvent" 
+                event-category="Прочее" 
+                event-action="Поделиться" 
+                event-label="twitter" 
+                event-value="undefined" 
+                ></div>
             </div>
 
             <div class="foodBlocksWrapper">
