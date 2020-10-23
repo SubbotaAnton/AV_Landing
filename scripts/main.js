@@ -1,6 +1,6 @@
 (function (global) {
 
-    const frequentOptions = [1.2, 1.3, 1.4, 1.5, 1.7, 1.9, 2, 2.2, 2.6, 2.7, 2.8, 3.2];
+    const frequentOptions = [1.2, 1.3, 1.4, 1.5, 1.7, 1.9, 2, 2.2, 2.6, 2.7, 2.8, 2.9, 3.2];
 
     const questionnaireResult = [];
 
