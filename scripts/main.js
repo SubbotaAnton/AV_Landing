@@ -1,4 +1,6 @@
-(function () {
+(function (global) {
+
+    const frequentOptions = [1.2, 1.3, 1.4, 1.5, 1.7, 1.9, 2, 2.2, 2.6, 2.7, 2.8, 3.2];
 
     const questionnaireResult = [];
 
@@ -58,10 +60,18 @@
         document.getElementById('step_2').classList.remove('hidden');
         window.setTimeout(() => {
             document.getElementById('step_2').classList.add('hidden');
-            document.location = `./result.html?data=${questionnaireResult.join('.')}`;
+            const expense = global.LandingCalculator.getTotal(questionnaireResult);
+            const months = Math.round(global.LandingCalculator.IPHONE_PRICE / expense * 10) / 10;
+            const data = questionnaireResult.join('.')
+            if (frequentOptions.includes(months)) {
+                const htmlPostfix = months.toString().split('.').join('_');
+                document.location = `./result_${htmlPostfix}.html?data=${data}`;
+            } else {
+                document.location = `./result.html?data=${data}`;
+            }
         }, 3000);
     }
 
     step1Handlers();
 
-}());
+}(window));

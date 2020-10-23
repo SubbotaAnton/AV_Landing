@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.googletagmanager.com/gtm.js?id=GTM-PMDFG9" async=""></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PMDFG9');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--   meta for sharing -->
+    <meta property="og:url"             content="https://www.sravni.ru/promo/azbuka-vkusa/" />
+    <meta property="og:title"           content="Индекс Айфона" />
+    <meta property="og:description"     content="Посчитайте, сколько времени вы сможете питаться на 79 990 рублей!" />
+    <meta property="og:image"           content="https://www.sravni.ru/wp-content/themes/sravniru/assets/landing/azbuka-vkusa/images/iphone_2_8_months.png" />
+    <!--   meta for sharing -->
+
+    <title>Sravni Azbuka</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Chart.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <!-- Put this script tag to the <head> of your page -->
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMDFG9"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=5130895303602643" nonce="v9KuvDW8"></script>
+<!-- Load Facebook SDK for JavaScript -->
+
+<header class="mainBackground">
+    <div class="sravniLogo">
+        <a href="#" class="logoLink" target="_blank"><span class="sravniIcon"></span></a>
+    </div>
+    <div class="azbukaLogo">
+        <a href="https://av.ru/?utm_source=sravni.ru&utm_medium=special_project&utm_campaign=IPhone12&utm_content=link1" class="logoLink" target="_blank"><span class="azbukaIcon"></span></a>
+    </div>
+</header>
+
+<div class="content">
+    <div class="result">
+        <p class="eatingIphone" id="eating_iphone"></p>
+        <div class="diagram">
+            <span class="pieChartIcon"></span>
+            <canvas id="pieChart" width="400" height="400"></canvas>
+        </div>
+
+        <p class="shareTitle">Поделиться</p>
+        <div class="share" id="share">
+            <div class="shareButton" id="vk_share"
+                 event="adEvent"
+                 event-category="Прочее"
+                 event-action="Поделиться"
+                 event-label="vk"
+                 event-value="undefined"
+            ></div>
+            <div class="fbShare shareButton" id="fb_share"
+                 event="adEvent"
+                 event-category="Прочее"
+                 event-action="Поделиться"
+                 event-label="facebook"
+                 event-value="undefined"
+            ></div>
+            <div class="twitterShare shareButton" id="twitter_share"
+                 event="adEvent"
+                 event-category="Прочее"
+                 event-action="Поделиться"
+                 event-label="twitter"
+                 event-value="undefined"
+            ></div>
+        </div>
+
+        <div class="foodBlocksWrapper">
+            <p class="foodBlocksTitle">Пример продуктовой корзины</p>
+
+            <!--    Мясо              -->
+
+            <div class="foodBlock meatBlock hidden" id="foodBlock_1">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Мясо и мясные продукты</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Колбаса варёная «Докторская» от Татьяны Ерёмкиной, «Наша ферма», Московская область </p>
+                        <p class="foodBlockFoodPrice">900 гр (118,90 рублей за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Рулька свиная охлажденная Мираторг Россия</p>
+                        <p class="foodBlockFoodPrice">1100 гр (245,30 рублей за 1 шт)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Вырезка из говядины, «Наша Ферма», Россия</p>
+                        <p class="foodBlockFoodPrice">1 кг (299,80 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Фарш из филе индейки «Азбука Вкуса» Россия</p>
+                        <p class="foodBlockFoodPrice">1 кг (65 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Филe цыпленка охлажденное Кудашка Россия</p>
+                        <p class="foodBlockFoodPrice">1 кг (36,90 за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сосиски Окраина Докторские ц/о МПЗ Богородский Россия</p>
+                        <p class="foodBlockFoodPrice">1 кг (42,90 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Грудинка копчено/вареная МД Бородина Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (122,50 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Рулет запеченный куриный "Деликатесный", Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (85,90 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Салями «Немецкая», «Окраина», Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (117,90 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Колбаса Велком Торро с/к Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (85,90 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">8 044 ₽</span>
+                </p>
+            </div>
+
+            <!--    РЫБА               -->
+
+            <div class="foodBlock fishBlock hidden" id="foodBlock_2">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Рыба и рыбные продукты</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Семга охлажденная филе на коже, Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (171 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Форель радужная "Ла Маре"</p>
+                        <p class="foodBlockFoodPrice">500 гр (799 руб за кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Креветки красные 30/50 б/г Аргентина</p>
+                        <p class="foodBlockFoodPrice">500 гр (174 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сельдь Два капитана кусочками в масле 300г пластик Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (125 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лосось атлантический Просто Азбука (семга) ломтики малосоленая Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (1895 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">4 219.5 ₽</span>
+                </p>
+            </div>
+
+            <!--    ОВОЩИ И ЗЕЛЕНЬ                -->
+
+            <div class="foodBlock vegetablesAndHerbsBlock hidden" id="foodBlock_3">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Овощи и зелень</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лук репчатый фасованный</p>
+                        <p class="foodBlockFoodPrice">1 кг (49 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Чеснок 1 уп. Китай</p>
+                        <p class="foodBlockFoodPrice">300 гр (86 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Помидоры сливовидные грунтовые</p>
+                        <p class="foodBlockFoodPrice">1 кг (98 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Помидоры черри 500 г Азербайджан</p>
+                        <p class="foodBlockFoodPrice">500 гр (238 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Огурцы "Луховицкие"</p>
+                        <p class="foodBlockFoodPrice">1 кг (168 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Перец красный 400 гр</p>
+                        <p class="foodBlockFoodPrice">400 гр (157 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Перец желтый</p>
+                        <p class="foodBlockFoodPrice">200 гр (59,60 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Капуста цветная весовая</p>
+                        <p class="foodBlockFoodPrice">600 гр (148 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Капуста цветная весовая</p>
+                        <p class="foodBlockFoodPrice">600 гр (148 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Капуста брокколи</p>
+                        <p class="foodBlockFoodPrice">500 гр (164 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Капуста молодая</p>
+                        <p class="foodBlockFoodPrice">500 гр (62,40 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Морковь новый урожай</p>
+                        <p class="foodBlockFoodPrice">1 кг (76 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Свекла новый урожай</p>
+                        <p class="foodBlockFoodPrice">500 гр (48 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Кабачки 500 г</p>
+                        <p class="foodBlockFoodPrice">500 гр (48 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Баклажаны</p>
+                        <p class="foodBlockFoodPrice">500 гр (198 руб за 450 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Редис с ботвой «Просто Азбука» 300 г</p>
+                        <p class="foodBlockFoodPrice">300 гр (138 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Редька зеленая</p>
+                        <p class="foodBlockFoodPrice">200 гр (128 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Картофель</p>
+                        <p class="foodBlockFoodPrice">4 кг (35,50 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">1 822,2 ₽</span>
+                </p>
+            </div>
+
+            <!--    ФРУКТЫ И ЯГОДЫ               -->
+
+            <div class="foodBlock fruitsAndBerriesBlock hidden" id="foodBlock_4">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Фрукты и ягоды</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Яблоки "Примаруж"</p>
+                        <p class="foodBlockFoodPrice">1 кг (143 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Виноград Дамские пальчики белые</p>
+                        <p class="foodBlockFoodPrice">500 гр (218 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Виноград черный, Молдова</p>
+                        <p class="foodBlockFoodPrice">500 гр (126 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Апельсины крупные</p>
+                        <p class="foodBlockFoodPrice">1 кг (198 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Грейпфруты</p>
+                        <p class="foodBlockFoodPrice">1 кг (168 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Слива красная</p>
+                        <p class="foodBlockFoodPrice">1 кг (148 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Персики, Узбекистан</p>
+                        <p class="foodBlockFoodPrice">1 кг (260 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">1 089 ₽</span>
+                </p>
+            </div>
+
+            <!--    Яйца              -->
+
+            <div class="foodBlock eggsBlock hidden" id="foodBlock_5">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Яйца</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Яйцо куриное С0 с омега-3 "Просто Азбука" 8 шт, Россия</p>
+                        <p class="foodBlockFoodPrice">8 шт (97 руб за 8 шт)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Яйцо куриное столовое С2 "Просто Азбука" 10 шт, Россия</p>
+                        <p class="foodBlockFoodPrice">10 шт (75,10 руб за 10 шт)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">172.1 ₽</span>
+                </p>
+            </div>
+
+            <!--    Молоко              -->
+
+            <div class="foodBlock milkBlock hidden" id="foodBlock_6">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Молоко</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Молоко ультрапастеризованное Белый Город 3,2% Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">7 кг (72,80 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Кефир Домик в деревне 3,2% 1л Россия</p>
+                        <p class="foodBlockFoodPrice">5 кг (84,90 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Ряженка Молочная культура м.д.ж. 3.5-4.5% 500г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">2 кг (87 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сливки пастеризованные Вологжанка 18% Вологодский МК 250г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">750 гр (74,90 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Йогурт натуральный Пробиотик+ "Просто Азбука" 0,1% 125 г, Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">250 гр (48,20 руб за 125 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Биойогурт термостатный Danone густой 1,5% обогащённый 250г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">500 гр (71 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сырок глазированный Свитлогорье 26% ванильный 50г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">200 гр (38,60 руб за 50 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сырок творожный глазированный Б.Ю.Александров м.д.ж. 20% Картошка 50г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">300 гр (45 руб за 50 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Творог Вологжанка 1,8% 300г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">300 гр (109 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Творог Сваля 9% 200г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">200 гр (108 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сметана Наша Ферма 20-26% Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">1 кг (72,20 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Брынза в рассоле из коровьего молока 40% Чизолини ОАО "Луч" Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">250 гр (64,40 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сыр свежий «Комкинский» с зеленью 34% от Татьяны Челышевой, «Наша Ферма», Тульская область, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">250 гр (69 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сыр плавленый сэндвич 45% Hochland 150г Россия</p>
+                        <p class="foodBlockFoodPrice">300 гр (89,90 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сыр Mozzarella 45% Zuger 100г Швейцария, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">200 гр (98,90 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сыр из коровьего молока 50% Ламбер Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">500 гр (98,70 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Масло сливочное Киприно Алтайское 82% Премиум 200г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">200 гр (224 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">4 788.8 ₽</span>
+                </p>
+            </div>
+
+            <!--    Хлеб              -->
+
+            <div class="foodBlock breadBlock hidden" id="foodBlock_7">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Хлеб</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлеб ржано-пшеничный нарезанный, «Просто Азбука», 400 г</p>
+                        <p class="foodBlockFoodPrice">1 кг (98 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лаваш тонкий Просто Азбука 240 г в упаковке</p>
+                        <p class="foodBlockFoodPrice">500 гр (47,70 руб за 240 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сушка-мини простые, «Семейка ОЗБИ», 150 г</p>
+                        <p class="foodBlockFoodPrice">300 гр (35,90 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лепешки Тортильяс Мексиканские пшеничные сырные Delicados, 400 г Россия</p>
+                        <p class="foodBlockFoodPrice">400 гр (146 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сухарики Finn Crisp ржаные 200 г Финляндия</p>
+                        <p class="foodBlockFoodPrice">200 гр (156 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлебцы Dr. Korner Кукурузно-рисовые с чиа и льном 100г Россия</p>
+                        <p class="foodBlockFoodPrice">100 гр (97,50 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлеб Дарницкий в нарезке Коломенский, 350 г Россия</p>
+                        <p class="foodBlockFoodPrice">700 гр (31,10 руб за 350 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлеб Зерновой Ржаной край 300 г ЗАО БКК «Коломенский» Россия</p>
+                        <p class="foodBlockFoodPrice">600 гр (93,50 за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлеб «Бородино» нарезанный, «Просто Азбука», 400 г</p>
+                        <p class="foodBlockFoodPrice">400 гр (96,30 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлеб для тостов с отрубями, «Просто Азбука», 300 г</p>
+                        <p class="foodBlockFoodPrice">900 гр (134 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Гренки Штурвал ржано-пшеничные со вкусом аджики 100г Россия</p>
+                        <p class="foodBlockFoodPrice">100 гр (47,70 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">1 517.5 ₽</span>
+                </p>
+            </div>
+
+            <!--    Крупы              -->
+
+            <div class="foodBlock cerealsBlock hidden" id="foodBlock_8">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Крупы</p>
+                <!--                    <ul>-->
+                <!--                        <li class="foodBlockItem">-->
+                <!--                            <p class="foodBlockFoodName">здесь будет название</p>-->
+                <!--                            <p class="foodBlockFoodPrice">здесь будет цена</p>-->
+                <!--                            <span class="foodBlockSeparator"></span>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">ххххх ₽</span>
+                </p>
+            </div>
+
+            <!--    Сладкое              -->
+
+            <div class="foodBlock sweetBlock hidden" id="foodBlock_9">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Сладкое</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сахар рафинад "Чайкофский" 500 г, Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (46,70 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Джем 0!Калорий Вишневый низкокалорийный 300г Россия</p>
+                        <p class="foodBlockFoodPrice">300 гр (299 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Мёд Горно-Алтайский гречишный кремовый весовой Россия</p>
+                        <p class="foodBlockFoodPrice">300 гр (127 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Шоколад, «Аленка», 100 г</p>
+                        <p class="foodBlockFoodPrice">400 гр (98,90 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Мармелад Ударница "Мармеландия" фруктовый коктейль 250г</p>
+                        <p class="foodBlockFoodPrice">500 гр (115 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сухари Семейка ОЗБИ сдобные ванильные 300 г</p>
+                        <p class="foodBlockFoodPrice">300 гр (89 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">1 441.2 ₽</span>
+                </p>
+            </div>
+
+            <!--    Масло              -->
+
+            <div class="foodBlock oilBlock hidden" id="foodBlock_10">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Масло</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Масло подсолнечное "Золотая семечка" рафинированное, 500 мл, Россия</p>
+                        <p class="foodBlockFoodPrice">200 мл (64,90 руб за 500 мл)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Масло оливковое "Monini" Extra Virgin, регион Умбрия, 200 мл, спрей, Италия</p>
+                        <p class="foodBlockFoodPrice">200 мл (510 руб за 200 мл)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">536 ₽</span>
+                </p>
+            </div>
+
+            <!--    Консервы              -->
+
+            <div class="foodBlock cannedFoodBlock hidden" id="foodBlock_11">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Консервы</p>
+                <!--                    <ul>-->
+                <!--                        <li class="foodBlockItem">-->
+                <!--                            <p class="foodBlockFoodName">здесь будет название</p>-->
+                <!--                            <p class="foodBlockFoodPrice">здесь будет цена</p>-->
+                <!--                            <span class="foodBlockSeparator"></span>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">ххххх ₽</span>
+                </p>
+            </div>
+
+            <!--    Замороженное              -->
+
+            <div class="foodBlock frozenFoodBlock hidden" id="foodBlock_12">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Замороженная еда</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пельмени Сибирское подворье Мамины (5 гр) 800 г пакет Россия</p>
+                        <p class="foodBlockFoodPrice">800 гр (539 руб за 800 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Наггетсы Мираторг классические куриные 300г Россия</p>
+                        <p class="foodBlockFoodPrice">900 гр (155 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Жареный рис с морепродуктами Hanwoomul 300г Южная Корея</p>
+                        <p class="foodBlockFoodPrice">600 гр (344 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лазанья «Болоньезе» охлажденная, «Почти готово», 400 г, Россия</p>
+                        <p class="foodBlockFoodPrice">800 гр (398 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Овощная смесь «Парижская» с беконом для жарки, Bonduelle, 700 г, Франция</p>
+                        <p class="foodBlockFoodPrice">1400 гр (342 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Картофель фри McCain "Золотистый" длинный и тонкий 750 г пакет Польша</p>
+                        <p class="foodBlockFoodPrice">1500 гр (219 руб за 750 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Смесь Vитамин Гавайская 400г Россия</p>
+                        <p class="foodBlockFoodPrice">800 гр (95,40 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">3 490.8 ₽</span>
+                </p>
+            </div>
+
+            <!--    Готовая еда              -->
+
+            <div class="foodBlock readyMealBlock hidden" id="foodBlock_13">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Готовая еда</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Борщ, «Уже Готово», 500 г, Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (298 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Солянка мясная, «Уже Готово», 500 г Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (258 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лаваш с курицей и мягким сыром, «Уже Готово», 250 г</p>
+                        <p class="foodBlockFoodPrice">500 гр (225 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Омлет классический на пару, «Считаем калории», 3 шт в наборе, 150 г Россия</p>
+                        <p class="foodBlockFoodPrice">600 гр (98 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пюре картофельное 400 г Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">1200 гр (218 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Баранина тушеная с гречкой 320 гр Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">640 гр (398 руб за 320 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Котлеты домашние из телятины и свинины жареные 4 шт в наборе 280 г Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">1120 гр (368 руб за 280 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Набор пирожков домашних с мясом от шеф-пекаря АВ 200 г 5 штук</p>
+                        <p class="foodBlockFoodPrice">600 гр (256 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лапша «Доширак» с курицей, 90 г, Россия</p>
+                        <p class="foodBlockFoodPrice">180 гр (43,50 руб за 90 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Паста с курицей, томатным соусом и моцареллой, «Уже Готово», 300 г, Россия</p>
+                        <p class="foodBlockFoodPrice">600 гр (259 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Спагетти Болоньезе 300 г Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">600 гр (296 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Каша рисовая молочная 250 г Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">10 порций (168 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Каша овсяная молочная 250 г Уже Готово</p>
+                        <p class="foodBlockFoodPrice">10 порций (168 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Каша пшенная молочная 250 г Уже Готово</p>
+                        <p class="foodBlockFoodPrice">10 порций (168 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лапша куриная, «Уже Готово», 550 г, Россия</p>
+                        <p class="foodBlockFoodPrice">3 порции (258 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">12090 ₽</span>
+                </p>
+            </div>
+
+            <!--    Деликатесы              -->
+
+            <div class="foodBlock delicaciesBlock hidden" id="foodBlock_14">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Деликатесы</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сыр из коровьего молока Пармезан 40% 3 месяца Laime Аргентина, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">1 кг (196 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хамон с/в Casademont 100г нарезка Россия</p>
+                        <p class="foodBlockFoodPrice">1 кг (398 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">5 940 ₽</span>
+                </p>
+            </div>
+
+            <!--    Детские товары 0-3 года             -->
+
+            <div class="foodBlock babyBlock hidden" id="foodBlock_15">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Детские товары 0-3 года</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пюре Gerber яблоко с 4 месяцев 80г Польша</p>
+                        <p class="foodBlockFoodPrice">800 гр (71 руб за 80 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Макаронные изделия Dalla Costa Disney Микки Маус Фарфаллине БИО 300 г пакет Италия</p>
+                        <p class="foodBlockFoodPrice">600 гр (205 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Каша Fleur Alpine гречневая безмолочная с 4 месяцев 175 г Германия</p>
+                        <p class="foodBlockFoodPrice">10 порций (377 руб за 175 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пюре «Яблоко, банан, клубника, овсянка» с 6 месяцев, Peek-a-boo, 113 г, Испания</p>
+                        <p class="foodBlockFoodPrice">10 порций (126 руб за 113 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пюре Peek-a-boo яблоко,малина,черника с 6 месяцев 113 г дой-пак Испания</p>
+                        <p class="foodBlockFoodPrice">10 порций (126 руб за 113 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пюре мясное Rudolfs Цыплёнок стерилизованное гомогенизированное 120г Латвия</p>
+                        <p class="foodBlockFoodPrice">10 порций (225 руб за 120 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пюре Hipp из индейки с рисом и овощами (с 12 месяцев) 220г</p>
+                        <p class="foodBlockFoodPrice">10 порций (160 руб за 220 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Смесь детская стерилизованная Агуша -2 с пребиотиками 3,1% 200г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">1 кг (36,80 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Каша Fleur Alpine гречневая безмолочная с 4 месяцев 175 г Германия</p>
+                        <p class="foodBlockFoodPrice">10 порций (377 руб за 175 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Творог детский Агуша классический 4,5% 100г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">10 порций 29, 90 рублей за 100 гр</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Биолакт детский Тема 3,2% 208г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">7 порций 37,60 рублей за 100 гр</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Кефир детский Крепыш 3,2% 204мл Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">10 порций 25,90 руб за 204 гр</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Печенье «Французское. Органик» с 8 месяцев, Fleur Alpine, 150 г, Бельгия</p>
+                        <p class="foodBlockFoodPrice">7 порций (281 гр за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">17 000 ₽</span>
+                </p>
+            </div>
+
+            <!--    Детские товары 3+ года             -->
+
+            <div class="foodBlock childBlock hidden" id="foodBlock_16">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Детские товары 3+ </p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Макаронные изделия Dalla Costa Disney Микки Маус Фарфаллине БИО 300 г пакет Италия</p>
+                        <p class="foodBlockFoodPrice">600 гр (205 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Молоко питьевое стерилизованное Агуша 3,2% 4 литра</p>
+                        <p class="foodBlockFoodPrice">59 руб за уп</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Сырок глазированный Б.Ю.Александров 15% в молочном шоколаде 6х25г с игрушкой Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">300 гр (203 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Суфле из индейки паровое с картофелем и брокколи, «Вкусно Детям», 300 г</p>
+                        <p class="foodBlockFoodPrice">10 порций (269 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Жаркое с курицей Вкусно детям 250 г Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">10 порций (228 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Ананас резаный полукольца 300 г Mosaic Россия</p>
+                        <p class="foodBlockFoodPrice">600 гр (298 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Манго Кубики Mosaic 500 г Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (698 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Йогурт Растишка клубника 70г Россия, БЗМЖ</p>
+                        <p class="foodBlockFoodPrice">10 порций (27,50 руб за 70 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Пирожное Киндер Делис 42 г Италия</p>
+                        <p class="foodBlockFoodPrice">10 порций (51,90 руб за 42 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Запеканка картофельная с мясом Вкусно детям 220 г Уже Готово Россия</p>
+                        <p class="foodBlockFoodPrice">7 порций (269 руб за 220 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Яблоки красные новый урожай Просто Азбука</p>
+                        <p class="foodBlockFoodPrice">5,1 кг (370,60 руб за 1700 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Капуста брокколи Hortex Mini 300 г Россия</p>
+                        <p class="foodBlockFoodPrice">10 порций (142 руб за 300 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Свекла вареная очищенная, «Просто Азбука», 500 г</p>
+                        <p class="foodBlockFoodPrice">2 кг (98 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Морковь мини, 250 г</p>
+                        <p class="foodBlockFoodPrice">1 кг (148 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Помидоры Черри сливовидные 250 г в стакане</p>
+                        <p class="foodBlockFoodPrice">1 кг (98 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Шпинат</p>
+                        <p class="foodBlockFoodPrice">300 гр (84 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Салат "Хрустящий айсберг"</p>
+                        <p class="foodBlockFoodPrice">360 гр (115 руб за 180 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Смесь Yelli Детская каша кукурузная с фруктами, 120 г Россия</p>
+                        <p class="foodBlockFoodPrice">7 порций (62,30 руб за 120 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Смесь "Детский супчик гороховый" Yelli 100 г, Россия</p>
+                        <p class="foodBlockFoodPrice">10 порций (62,30 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Смесь "Детский супчик буковки" Yelli 100 г, Россия</p>
+                        <p class="foodBlockFoodPrice">10 порций (62,30 руб за 80 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Овощной микс морковь, сельдерей 160 г Mosaic, Россия</p>
+                        <p class="foodBlockFoodPrice">7 порций (118 руб за 160 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">16 579.1 ₽</span>
+                </p>
+            </div>
+
+            <!--    Товары для кошек             -->
+
+            <div class="foodBlock catsBlock hidden" id="foodBlock_17">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Товары для кошек</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Корм для кошек "Кусочки в соусе" с курицей и индейкой Bozita Feline 370 г, Швеция</p>
+                        <p class="foodBlockFoodPrice">4 кг (209 руб за 370 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Корм Purina ONE сухой для кошек с индейкой и рисом, для кошек с чувствительным пищеварением Россия 1.5кг Россия</p>
+                        <p class="foodBlockFoodPrice">3 кг (599 руб за 1,5 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лакомство для кошек Мнямс Лакомые палочки с говядиной и печенью Pro Pet Austria Heimtiernahrung 3шт по 5г Австрия</p>
+                        <p class="foodBlockFoodPrice">150 гр (79,50 руб за 15 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">6 063 ₽</span>
+                </p>
+            </div>
+
+
+            <!--    Товары для собак             -->
+
+            <div class="foodBlock dogsBlock hidden" id="foodBlock_18">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Товары для собак</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Корм сухой полнорационный с говядиной, для взрослых собак всех пород, Pedigree, 600 г, Россия</p>
+                        <p class="foodBlockFoodPrice">6 кг (138 руб за 600 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Консервы для собак Happy Dog "Ягненок и рис" 400г</p>
+                        <p class="foodBlockFoodPrice">4 кг (123 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Лакомство для собак TitBit Лакомый Кусочек утиные грудки, 60 г Россия</p>
+                        <p class="foodBlockFoodPrice">600 гр (215 руб за 60 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">4 760 ₽</span>
+                </p>
+            </div>
+
+            <!--    Вместо мяса и рыбы             -->
+
+            <div class="foodBlock replaceMeatAndFishBlock hidden" id="foodBlock_19">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Вместо мяса и рыбы</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Колбаса полукопченая салями пряная постная, «Вего», 400 г, Россия</p>
+                        <p class="foodBlockFoodPrice">400 гр (610 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Шашлычные колбаски Вего 320г Россия</p>
+                        <p class="foodBlockFoodPrice">640 гр (398 руб за 320 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Мясо соевое со вкусом курицы Ваше здоровье 100г Россия</p>
+                        <p class="foodBlockFoodPrice">200 гр (53,30 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Икра красная из морских водорослей Vegan 100 г, Россия</p>
+                        <p class="foodBlockFoodPrice">100 гр (182 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Горох нут Чечи Casa Rinaldi 400 г, Италия</p>
+                        <p class="foodBlockFoodPrice">800 гр (129 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Проростки фасоли, 150 г</p>
+                        <p class="foodBlockFoodPrice">150 гр (158 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Тофу, «Зеленая компания», 200 г, Россия</p>
+                        <p class="foodBlockFoodPrice">400 гр (148 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хумус классический Mediterio, 180 г</p>
+                        <p class="foodBlockFoodPrice">10 порций (232 руб за 180 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Фасоль из печи, «Просто Азбука», 530 г, Россия</p>
+                        <p class="foodBlockFoodPrice">4 порции (168 руб за 530 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Горох нут, «Мистраль», 450 г, Россия</p>
+                        <p class="foodBlockFoodPrice">2,2 кг (125 руб за 450 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">6 023.6 ₽</span>
+                </p>
+            </div>
+
+            <!--    Зелень           -->
+
+            <div class="foodBlock herbsBlock hidden" id="foodBlock_20">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Зелень</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Салатный микс (айсберг,романо, руккола) 125 г Белая дача</p>
+                        <p class="foodBlockFoodPrice">125 гр (149 руб за 125 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Зелень укропа и петрушки, «Просто Азбука», 100 г</p>
+                        <p class="foodBlockFoodPrice">200 гр (89 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Авокадо</p>
+                        <p class="foodBlockFoodPrice">800 гр (336 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Салатный микс из Микрозелени №8 (дайкон, горох, лук, шнитт, пажитник) 75 г</p>
+                        <p class="foodBlockFoodPrice">3 порции (248 руб за 75 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Салат "Пряная рукола"</p>
+                        <p class="foodBlockFoodPrice">5 порций (169 руб за 65 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Салатная смесь "Весенний Микс" (айсберг, красный редис, морковь)</p>
+                        <p class="foodBlockFoodPrice">5 порций (135 руб за 180 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">3 263 ₽</span>
+                </p>
+            </div>
+
+            <!--    Орехи и крупы           -->
+
+            <div class="foodBlock nutsAndCerealsBlock hidden" id="foodBlock_21">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Орехи и крупы</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Кешью Сёмушка жареный 250г пакет Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (596 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Кедровые орехи АЮ-дух леса очищенные 100 г Россия</p>
+                        <p class="foodBlockFoodPrice">200 гр (369 руб за 100 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Паста кокосовая DopDrops (без сахара) 250г Россия</p>
+                        <p class="foodBlockFoodPrice">250 гр (221 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Семена Чиа "UFEELGOOD", 200г, Болгария</p>
+                        <p class="foodBlockFoodPrice">100 гр (498 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Финик Королевский 500 г, Израиль</p>
+                        <p class="foodBlockFoodPrice">500 гр (698 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Крупа гречневая зелёная для проращивания с Алтая, «Образ Жизни», 500 г, Алтайский край</p>
+                        <p class="foodBlockFoodPrice">500 гр (105 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Паста Greenmania Фундук-Шоколад 200г Россия</p>
+                        <p class="foodBlockFoodPrice">200 гр (470 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Паста арахисовая Grizzly Nuts кремовая 370г стекло Россия</p>
+                        <p class="foodBlockFoodPrice">370 гр (469 руб за 370 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">4 291 ₽</span>
+                </p>
+            </div>
+
+            <!--    Замена молока           -->
+
+            <div class="foodBlock replaceMilkBlock hidden" id="foodBlock_22">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">Замена молока</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Напиток кокосовый с соей Alpro Professionals обогащенный кальцием и витаминами 1л Бельгия</p>
+                        <p class="foodBlockFoodPrice">2 кг (346 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Напиток миндальный Alpro без сахара обогащенный кальцием и витаминами 1л Бельгия</p>
+                        <p class="foodBlockFoodPrice">2 кг (346 руб за 1 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Десерт овсяный ягодный, Nemoloko, 0.25 л, Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (68,50 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Десерт соевый глазированный в темном шоколаде с ванилью 10% "Б.Ю. Александров" 50 г, Россия</p>
+                        <p class="foodBlockFoodPrice">200 гр (58 руб за 50 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Смузи be true киви+ананас, 0.25л пластиковая бутылка Россия</p>
+                        <p class="foodBlockFoodPrice">1 кг (155 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Тофу, «Зеленая компания», 200 г, Россия</p>
+                        <p class="foodBlockFoodPrice">400 гр (148 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Тофу, «Зеленая компания», 200 г, Россия</p>
+                        <p class="foodBlockFoodPrice">400 гр (148 руб за 200 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Набор Trawa для приготовления растительного молока Россия</p>
+                        <p class="foodBlockFoodPrice">500 гр (998 руб за 500 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Напиток миндальный Alpro без сахара обогащенный кальцием и витаминами 1л Бельгия</p>
+                        <p class="foodBlockFoodPrice">5 л (346 руб за 1 л)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Напиток рисовый натуральный (без глютена), ISOLA BIO, 1 л, Италия</p>
+                        <p class="foodBlockFoodPrice">5 л (250 руб за 1 л)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Напиток соевый Bite 1л Испания</p>
+                        <p class="foodBlockFoodPrice">5 л (289 руб за 1 л)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">8 381 ₽</span>
+                </p>
+            </div>
+
+            <!--    ЗОЖ           -->
+
+            <div class="foodBlock healthBlock hidden" id="foodBlock_23">
+                <div class="foodBlockIcon"></div>
+                <p class="foodBlockTitle">ЗОЖ</p>
+                <ul>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Хлопья Nordic Органик овсяные 600 г Финляндия</p>
+                        <p class="foodBlockFoodPrice">1200 гр (245 руб за 600 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Гранола "Органик" Lizi`s 400 г, Великобритания</p>
+                        <p class="foodBlockFoodPrice">1600 гр (985 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Шпинат резанный в шайбах, «Просто Азбука», 400 г, Россия</p>
+                        <p class="foodBlockFoodPrice">800 гр (124 руб за 400 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Яблоки Гранни Смит "Просто Азбука"</p>
+                        <p class="foodBlockFoodPrice">3 упаковки (370,60 руб за 1,7 кг)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Клубника свежая, 250 г</p>
+                        <p class="foodBlockFoodPrice">1 кг (198 руб за 250 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Оливки зелёные Gaea с косточкой БИО 150 г сашет Греция</p>
+                        <p class="foodBlockFoodPrice">150 гр (399 руб за 150 гр)</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Филе цыпленка охлажденное, «Просто Азбука», Россия</p>
+                        <p class="foodBlockFoodPrice">379,05 рублей</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                    <li class="foodBlockItem">
+                        <p class="foodBlockFoodName">Филе грудки индейки малое Индилайт 500г лоток</p>
+                        <p class="foodBlockFoodPrice">269 рублей</p>
+                        <span class="foodBlockSeparator"></span>
+                    </li>
+                </ul>
+                <p class="foodBlockResult">
+                    <span class="foodBlockResultText">Итого в месяц:</span>
+                    <span class="foodBlockResultValue">12 275 ₽</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./scripts/Chart.min.js"></script>
+<script type="text/javascript" src="./scripts/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./scripts/calculator.js"></script>
+<script type="text/javascript" src="./scripts/result.js"></script>
+</body>
+</html>
