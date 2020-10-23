@@ -27,18 +27,19 @@
         const expense = global.LandingCalculator.getTotal(questionnaireResult);
         const months = Math.round(global.LandingCalculator.IPHONE_PRICE / expense * 10) / 10;
         let compare;
-        let speed;
-        if (expense > global.LandingCalculator.BASIC_EXPENSE) {
+        const speed = global.LandingCalculator.getSpeed(expense);
+        if (expense < global.LandingCalculator.BASIC_EXPENSE) {
             compare = 'меньше';
         } else {
             compare = 'больше';
         }
-        document.getElementById('eating_iphone').innerHTML = `Вы можете питаться на стоимость Айфона ${months} месяца. 
-            Это ${compare} на ${global.LandingCalculator.getSpeed(expense)}%, чем средний москвич`;
+        const finalPhrase = `Среднему москвичу на это нужно на ${speed}% ${compare} времени.`
+
+        document.getElementById('eating_iphone').innerHTML = `Вы можете питаться на стоимость Айфона ${months} месяца. ${finalPhrase}`;
 
         initChart(blockLists);
 
-        const shareText = `Я могу питаться на стоимость Айфона ${months} месяца. Это на ${speed}% ${compare}, чем средний москвич.`;
+        const shareText = `Я могу питаться на стоимость Айфона ${months} месяца. ${finalPhrase}`;
         const absoluteURL = 'https%3A%2F%2Fwww.sravni.ru%2Fpromo%2Fazbuka-vkusa%2F';
 
         // vk share

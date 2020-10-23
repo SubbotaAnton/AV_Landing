@@ -23,8 +23,8 @@
         },
         'e': {
             important: [11, 12],
-                forbidden: [1, 2, 3],
-                usual: [4, 5, 6, 7, 9, 10]
+                forbidden: [],
+                usual: [1, 2, 3, 4, 5, 6, 7, 9, 10]
         },
         'f': {
             important: [15],
