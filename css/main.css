@@ -444,7 +444,7 @@ header {
 }
 
 .cannedFoodBlock .foodBlockIcon {
-    background-image: url('../images/cannedFood.svg');
+    background-image: url('../images/cannedfood.svg');
     width: 26px;
     height: 48px;
 }
@@ -456,7 +456,7 @@ header {
 }
 
 .frozenFoodBlock .foodBlockIcon {
-    background-image: url('../images/frozenFood.svg');
+    background-image: url('../images/frozenfood.svg');
     width: 32px;
     height: 36px;
 }
@@ -468,7 +468,7 @@ header {
 }
 
 .readyMealBlock .foodBlockIcon {
-    background-image: url('../images/readyMeal.svg');
+    background-image: url('../images/readymeal.svg');
     width: 30px;
     height: 32px;
 }
@@ -540,7 +540,7 @@ header {
 }
 
 .replaceMeatAndFishBlock .foodBlockIcon {
-    background-image: url('../images/replaceMeatAndFish.svg');
+    background-image: url('../images/replacemeatandfish.svg');
     width: 34px;
     height: 36px;
 }
